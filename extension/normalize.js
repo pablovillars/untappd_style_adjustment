@@ -8,8 +8,7 @@ function computeAdjusted(rawScore, styleName, styleData) {
   const styleStats = styleData.styles[styleName];
   if (!styleStats) return null;
 
-  const z = (rawScore - styleStats.mean) / styleStats.std;
-  const adjusted = styleData.global.mean + z * styleData.global.std;
+  const adjusted = rawScore - styleStats.mean + styleData.global.mean;
   return clamp(adjusted, 0, 5);
 }
 

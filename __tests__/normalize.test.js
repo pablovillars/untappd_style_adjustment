@@ -15,15 +15,15 @@ test('clamp keeps values within 0-5', () => {
 });
 
 test('lager scoring above its style mean gets boosted', () => {
-  // z = (3.5 - 3.21) / 0.38 = 0.763
-  // adjusted = 3.72 + 0.763 * 0.41 ≈ 4.03
+  // adjusted = 3.5 - 3.21 + 3.72 = 4.01
   const result = computeAdjusted(3.5, 'American Adjunct Lager', styleData);
-  expect(result).toBeCloseTo(4.03, 1);
+  expect(result).toBeCloseTo(4.01, 2);
 });
 
 test('stout scoring at its style mean returns global mean', () => {
+  // adjusted = 4.05 - 4.05 + 3.72 = 3.72
   const result = computeAdjusted(4.05, 'Imperial Stout', styleData);
-  expect(result).toBeCloseTo(3.72, 1);
+  expect(result).toBeCloseTo(3.72, 2);
 });
 
 test('unknown style returns null', () => {
