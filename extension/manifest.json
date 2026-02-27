@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Untappd Score Normalizer",
+  "version": "1.0.0",
+  "description": "Adjusts Untappd scores by style using z-score normalization",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://untappd.com/*",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://untappd.com/*"],
+      "js": ["normalize.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

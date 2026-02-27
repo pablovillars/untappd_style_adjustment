@@ -1,0 +1,5 @@
+node_modules/
+__pycache__/
+scraper/.venv/
+*.pyc
+data/raw-scores.json
