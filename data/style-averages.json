@@ -1,1 +1,534 @@
-{}
+{
+  "updated_at": "2026-02-27",
+  "global": {
+    "mean": 4.1624,
+    "std": 0.3078
+  },
+  "styles": {
+    "Altbier - Traditional": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Barleywine - American": {
+      "mean": 4.317,
+      "std": 0.0668,
+      "sample": 50
+    },
+    "Barleywine - English": {
+      "mean": 4.4505,
+      "std": 0.1069,
+      "sample": 50
+    },
+    "Belgian Dubbel": {
+      "mean": 3.9397,
+      "std": 0.0676,
+      "sample": 50
+    },
+    "Belgian Quadrupel": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Belgian Strong Dark Ale": {
+      "mean": 4.1437,
+      "std": 0.0495,
+      "sample": 50
+    },
+    "Belgian Strong Golden Ale": {
+      "mean": 3.9998,
+      "std": 0.0406,
+      "sample": 50
+    },
+    "Belgian Tripel": {
+      "mean": 4.0416,
+      "std": 0.0473,
+      "sample": 50
+    },
+    "Bitter - Extra Special / Strong (ESB)": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Bock - Doppelbock": {
+      "mean": 4.0511,
+      "std": 0.0658,
+      "sample": 50
+    },
+    "Bock - Hell / Maibock / Lentebock": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Bock - Single / Traditional": {
+      "mean": 3.8911,
+      "std": 0.047,
+      "sample": 50
+    },
+    "Bock - Weizenbock": {
+      "mean": 3.8887,
+      "std": 0.0552,
+      "sample": 50
+    },
+    "Brown Ale - American": {
+      "mean": 3.9871,
+      "std": 0.0468,
+      "sample": 50
+    },
+    "Brown Ale - English": {
+      "mean": 3.9138,
+      "std": 0.0522,
+      "sample": 50
+    },
+    "California Common": {
+      "mean": 3.783,
+      "std": 0.0573,
+      "sample": 50
+    },
+    "Cream Ale": {
+      "mean": 3.9509,
+      "std": 0.0301,
+      "sample": 50
+    },
+    "Farmhouse Ale - Saison": {
+      "mean": 4.48,
+      "std": 0.0502,
+      "sample": 50
+    },
+    "Fruit Beer": {
+      "mean": 4.3584,
+      "std": 0.0759,
+      "sample": 50
+    },
+    "IPA - American": {
+      "mean": 4.2977,
+      "std": 0.0536,
+      "sample": 50
+    },
+    "IPA - Belgian": {
+      "mean": 3.9125,
+      "std": 0.054,
+      "sample": 50
+    },
+    "IPA - Black / Cascadian Dark Ale": {
+      "mean": 3.9783,
+      "std": 0.0327,
+      "sample": 50
+    },
+    "IPA - English": {
+      "mean": 3.8401,
+      "std": 0.0498,
+      "sample": 50
+    },
+    "IPA - Imperial / Double": {
+      "mean": 4.4387,
+      "std": 0.0358,
+      "sample": 50
+    },
+    "IPA - Imperial / Double New England / Hazy": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "IPA - Milkshake": {
+      "mean": 4.2083,
+      "std": 0.0568,
+      "sample": 50
+    },
+    "IPA - New England / Hazy": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "IPA - Red": {
+      "mean": 3.9139,
+      "std": 0.0554,
+      "sample": 50
+    },
+    "IPA - Session": {
+      "mean": 4.0078,
+      "std": 0.0482,
+      "sample": 50
+    },
+    "IPA - Session New England / Hazy": {
+      "mean": 3.9838,
+      "std": 0.0624,
+      "sample": 50
+    },
+    "IPA - Triple": {
+      "mean": 4.3845,
+      "std": 0.052,
+      "sample": 50
+    },
+    "IPA - Triple New England / Hazy": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "IPA - White / Wheat": {
+      "mean": 3.9725,
+      "std": 0.0452,
+      "sample": 50
+    },
+    "Kellerbier / Zwickelbier": {
+      "mean": 3.9109,
+      "std": 0.0503,
+      "sample": 50
+    },
+    "K\u00f6lsch": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Lager - American": {
+      "mean": 3.9186,
+      "std": 0.0432,
+      "sample": 50
+    },
+    "Lager - American Light": {
+      "mean": 3.8387,
+      "std": 0.0421,
+      "sample": 50
+    },
+    "Lager - Dark": {
+      "mean": 3.9661,
+      "std": 0.0637,
+      "sample": 50
+    },
+    "Lager - Dortmunder / Export": {
+      "mean": 3.8859,
+      "std": 0.0798,
+      "sample": 50
+    },
+    "Lager - Helles": {
+      "mean": 3.9897,
+      "std": 0.076,
+      "sample": 50
+    },
+    "Lager - Mexican": {
+      "mean": 3.8668,
+      "std": 0.0447,
+      "sample": 50
+    },
+    "Lager - Munich Dunkel": {
+      "mean": 3.9211,
+      "std": 0.0403,
+      "sample": 50
+    },
+    "Lager - Pale": {
+      "mean": 3.9234,
+      "std": 0.0446,
+      "sample": 50
+    },
+    "Lager - Sv\u011btl\u00e9 (Czech Pale)": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Lager - Vienna": {
+      "mean": 3.8835,
+      "std": 0.0389,
+      "sample": 50
+    },
+    "M\u00e4rzen": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Mild - Dark": {
+      "mean": 3.8956,
+      "std": 0.0549,
+      "sample": 50
+    },
+    "Old / Stock Ale": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Pale Ale - American": {
+      "mean": 4.2007,
+      "std": 0.0536,
+      "sample": 50
+    },
+    "Pale Ale - English": {
+      "mean": 3.8128,
+      "std": 0.0424,
+      "sample": 50
+    },
+    "Pale Ale - New England / Hazy": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Pilsner - Czech / Bohemian": {
+      "mean": 3.9945,
+      "std": 0.0799,
+      "sample": 50
+    },
+    "Pilsner - German": {
+      "mean": 4.0304,
+      "std": 0.0797,
+      "sample": 50
+    },
+    "Pilsner - Italian": {
+      "mean": 3.906,
+      "std": 0.0394,
+      "sample": 50
+    },
+    "Pilsner - Other": {
+      "mean": 3.9985,
+      "std": 0.0415,
+      "sample": 50
+    },
+    "Porter - American": {
+      "mean": 4.0643,
+      "std": 0.0551,
+      "sample": 50
+    },
+    "Porter - Baltic": {
+      "mean": 4.0994,
+      "std": 0.0672,
+      "sample": 50
+    },
+    "Porter - Coffee": {
+      "mean": 4.0924,
+      "std": 0.0764,
+      "sample": 50
+    },
+    "Porter - English": {
+      "mean": 3.9237,
+      "std": 0.0466,
+      "sample": 50
+    },
+    "Porter - Imperial / Double": {
+      "mean": 4.3664,
+      "std": 0.0675,
+      "sample": 50
+    },
+    "Pumpkin / Yam Beer": {
+      "mean": 4.0599,
+      "std": 0.0801,
+      "sample": 50
+    },
+    "Rauchbier": {
+      "mean": 3.9137,
+      "std": 0.0574,
+      "sample": 50
+    },
+    "Red Ale - American Amber / Red": {
+      "mean": 3.8958,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Red Ale - Irish": {
+      "mean": 3.845,
+      "std": 0.0424,
+      "sample": 50
+    },
+    "Rye Beer": {
+      "mean": 3.9775,
+      "std": 0.0973,
+      "sample": 50
+    },
+    "Schwarzbier": {
+      "mean": 3.9382,
+      "std": 0.0533,
+      "sample": 50
+    },
+    "Scotch Ale / Wee Heavy": {
+      "mean": 4.1232,
+      "std": 0.0623,
+      "sample": 50
+    },
+    "Scottish Ale": {
+      "mean": 3.8884,
+      "std": 0.0677,
+      "sample": 50
+    },
+    "Smoked Beer": {
+      "mean": 3.9338,
+      "std": 0.0568,
+      "sample": 50
+    },
+    "Sour - Berliner Weisse": {
+      "mean": 4.0194,
+      "std": 0.0394,
+      "sample": 50
+    },
+    "Sour - Flanders Oud Bruin": {
+      "mean": 4.103,
+      "std": 0.0786,
+      "sample": 50
+    },
+    "Sour - Flanders Red Ale": {
+      "mean": 4.161,
+      "std": 0.0711,
+      "sample": 50
+    },
+    "Sour - Fruited": {
+      "mean": 4.374,
+      "std": 0.0575,
+      "sample": 50
+    },
+    "Sour - Fruited Berliner Weisse": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Sour - Fruited Gose": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Sour - Other": {
+      "mean": 4.2354,
+      "std": 0.0389,
+      "sample": 50
+    },
+    "Sour - Traditional Gose": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Spiced / Herbed Beer": {
+      "mean": 3.9478,
+      "std": 0.0408,
+      "sample": 50
+    },
+    "Stout - American": {
+      "mean": 4.0908,
+      "std": 0.0783,
+      "sample": 50
+    },
+    "Stout - Coffee": {
+      "mean": 4.2361,
+      "std": 0.0884,
+      "sample": 50
+    },
+    "Stout - English": {
+      "mean": 3.8317,
+      "std": 0.0398,
+      "sample": 50
+    },
+    "Stout - Foreign / Export": {
+      "mean": 3.9605,
+      "std": 0.0807,
+      "sample": 50
+    },
+    "Stout - Imperial / Double": {
+      "mean": 4.6692,
+      "std": 0.0491,
+      "sample": 50
+    },
+    "Stout - Imperial / Double Coffee": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Stout - Imperial / Double Milk": {
+      "mean": 4.421,
+      "std": 0.0576,
+      "sample": 50
+    },
+    "Stout - Imperial / Double Oatmeal": {
+      "mean": 4.3482,
+      "std": 0.0822,
+      "sample": 50
+    },
+    "Stout - Imperial / Double Pastry": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Stout - Irish Dry": {
+      "mean": 3.8976,
+      "std": 0.0416,
+      "sample": 50
+    },
+    "Stout - Milk / Sweet": {
+      "mean": 4.2929,
+      "std": 0.0876,
+      "sample": 50
+    },
+    "Stout - Oatmeal": {
+      "mean": 4.0221,
+      "std": 0.0451,
+      "sample": 50
+    },
+    "Stout - Other": {
+      "mean": 4.1886,
+      "std": 0.0807,
+      "sample": 50
+    },
+    "Stout - Oyster": {
+      "mean": 3.8935,
+      "std": 0.0805,
+      "sample": 50
+    },
+    "Stout - Pastry": {
+      "mean": 4.1993,
+      "std": 0.0722,
+      "sample": 50
+    },
+    "Stout - Russian Imperial": {
+      "mean": 4.4735,
+      "std": 0.0844,
+      "sample": 50
+    },
+    "Strong Ale - American": {
+      "mean": 4.3983,
+      "std": 0.0847,
+      "sample": 50
+    },
+    "Strong Ale - English": {
+      "mean": 3.9742,
+      "std": 0.0978,
+      "sample": 50
+    },
+    "Table Beer": {
+      "mean": 4.013,
+      "std": 0.1083,
+      "sample": 50
+    },
+    "Wheat Beer - American Pale Wheat": {
+      "mean": 3.9381,
+      "std": 0.0711,
+      "sample": 50
+    },
+    "Wheat Beer - Dunkelweizen": {
+      "mean": 3.8174,
+      "std": 0.0423,
+      "sample": 50
+    },
+    "Wheat Beer - Fruited": {
+      "mean": 3.8759,
+      "std": 0.0543,
+      "sample": 50
+    },
+    "Wheat Beer - Hefeweizen": {
+      "mean": 3.8949,
+      "std": 0.0461,
+      "sample": 50
+    },
+    "Wheat Beer - Kristallweizen": {
+      "mean": 3.7118,
+      "std": 0.0492,
+      "sample": 50
+    },
+    "Wheat Beer - Witbier / Blanche": {
+      "mean": 4.6932,
+      "std": 0.0387,
+      "sample": 50
+    },
+    "Wild Ale - American": {
+      "mean": 4.4413,
+      "std": 0.0528,
+      "sample": 50
+    },
+    "Winter Warmer": {
+      "mean": 3.9406,
+      "std": 0.0719,
+      "sample": 50
+    }
+  }
+}
