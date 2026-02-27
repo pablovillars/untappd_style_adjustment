@@ -1,4 +1,4 @@
-const { computeAdjusted, clamp } = require('../normalize');
+const { computeAdjusted, clamp } = require('../extension/normalize');
 
 const styleData = {
   global: { mean: 3.72, std: 0.41 },
