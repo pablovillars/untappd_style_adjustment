@@ -2,7 +2,7 @@
 // Fetches style-averages.json from GitHub and caches in chrome.storage.local.
 // Update DATA_URL after pushing the repo to GitHub.
 
-const DATA_URL = 'https://raw.githubusercontent.com/YOUR_USERNAME/untapped/main/data/style-averages.json';
+const DATA_URL = 'https://raw.githubusercontent.com/pablovillars/untappd_style_adjustment/master/data/style-averages.json';
 const CACHE_KEY = 'styleData';
 const REFRESH_INTERVAL_MS = 24 * 60 * 60 * 1000; // 24h
 
