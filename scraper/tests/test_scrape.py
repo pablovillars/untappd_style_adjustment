@@ -1,5 +1,5 @@
 import pytest
-from scrape import parse_beer_cards, style_to_slug
+from scrape import parse_beer_cards, style_to_slug, style_to_query
 
 # Real HTML structure from Untappd (trimmed)
 SAMPLE_HTML = """
@@ -74,6 +74,18 @@ def test_parse_beer_cards_ignores_brewery_name_in_style():
     results = parse_beer_cards(SAMPLE_HTML)
     # Brewery names should not appear as style
     assert all('Brewing' not in style for _, style in results)
+
+
+# --- query tests ---
+
+def test_query_simple():
+    assert style_to_query('Lager - American') == 'lager american'
+
+def test_query_with_slash():
+    assert style_to_query('Stout - Imperial / Double') == 'stout imperial double'
+
+def test_query_removes_accents():
+    assert style_to_query('Kölsch') == 'kolsch'
 
 
 # --- slug tests ---

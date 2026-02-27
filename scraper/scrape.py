@@ -1,6 +1,7 @@
 """
 scraper/scrape.py
-Scrapes beer scores per style from Untappd top-rated pages.
+Scrapes beer scores per style from Untappd text search results.
+Uses search endpoint (not top-rated) to get a representative sample.
 Run: python scrape.py
 Output: ../data/raw-scores.json
 """
@@ -123,23 +124,29 @@ BEER_STYLES = [
     "Winter Warmer",
 ]
 
-BASE_URL = "https://untappd.com/beer/top_rated?type={slug}"
+SEARCH_URL = "https://untappd.com/search?q={query}&type=beer&p={page}"
+PAGES_PER_STYLE = 4  # 25 results/page → up to 100 beers per style
 
 
 def style_to_slug(style_name: str) -> str:
-    """Convert a style name to Untappd's URL slug format."""
-    # Normalize unicode (remove accents etc.)
+    """Convert a style name to Untappd's URL slug format (kept for reference)."""
     normalized = unicodedata.normalize('NFKD', style_name)
     ascii_str = normalized.encode('ascii', 'ignore').decode('ascii')
-    # Lowercase
     slug = ascii_str.lower()
-    # Replace separators: " - ", " / ", "/", " " -> "-"
     slug = slug.replace(' - ', '-').replace(' / ', '-').replace('/', '-').replace(' ', '-')
-    # Remove any remaining non-alphanumeric chars except hyphens
     slug = re.sub(r'[^a-z0-9-]', '', slug)
-    # Collapse multiple hyphens
     slug = re.sub(r'-+', '-', slug).strip('-')
     return slug
+
+
+def style_to_query(style_name: str) -> str:
+    """Convert a style name to a search query string."""
+    normalized = unicodedata.normalize('NFKD', style_name)
+    ascii_str = normalized.encode('ascii', 'ignore').decode('ascii')
+    query = ascii_str.lower()
+    query = query.replace(' - ', ' ').replace(' / ', ' ').replace('/', ' ')
+    query = re.sub(r'[^a-z0-9 ]', '', query).strip()
+    return query
 
 
 def parse_beer_cards(html: str) -> list[tuple[float, str]]:
@@ -170,20 +177,25 @@ def parse_beer_cards(html: str) -> list[tuple[float, str]]:
 
 
 async def scrape_style(page, style_name: str) -> list[float]:
-    """Scrape one style page, return list of scores."""
-    slug = style_to_slug(style_name)
-    url = BASE_URL.format(slug=slug)
-    try:
-        await page.goto(url, wait_until='networkidle', timeout=30000)
-        await page.wait_for_selector('div.beer-item', timeout=15000)
-        html = await page.content()
-        pairs = parse_beer_cards(html)
-        scores = [score for score, _ in pairs]
-        print(f"  {style_name}: {len(scores)} beers (slug: {slug})")
-        return scores
-    except Exception as e:
-        print(f"  {style_name}: FAILED — {e}")
-        return []
+    """Search for beers by style name across multiple pages, return matching scores."""
+    query = style_to_query(style_name)
+    encoded = query.replace(' ', '+')
+    scores = []
+    for p in range(1, PAGES_PER_STYLE + 1):
+        url = SEARCH_URL.format(query=encoded, page=p)
+        try:
+            await page.goto(url, wait_until='networkidle', timeout=30000)
+            await page.wait_for_selector('div.beer-item', timeout=15000)
+            html = await page.content()
+            pairs = parse_beer_cards(html)
+            # Filter to exact style match only
+            matched = [score for score, style in pairs if style == style_name]
+            scores.extend(matched)
+        except Exception as e:
+            print(f"  {style_name} p{p}: FAILED — {e}")
+            break
+    print(f"  {style_name}: {len(scores)} beers")
+    return scores
 
 
 async def scrape_all() -> dict[str, list[float]]:
