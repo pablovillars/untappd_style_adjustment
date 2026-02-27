@@ -125,7 +125,7 @@ BEER_STYLES = [
 ]
 
 SEARCH_URL = "https://untappd.com/search?q={query}&type=beer&p={page}"
-PAGES_PER_STYLE = 4  # 25 results/page → up to 100 beers per style
+PAGES_PER_STYLE = 8  # 25 results/page → up to 200 beers per style
 
 
 def style_to_slug(style_name: str) -> str:
