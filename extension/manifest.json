@@ -15,6 +15,7 @@
     {
       "matches": ["https://untappd.com/*"],
       "js": ["normalize.js", "content.js"],
+      "css": ["content.css"],
       "run_at": "document_idle"
     }
   ],
